@@ -1,0 +1,13 @@
+To fix this, you need to make the hover selector more specific than any conflicting selectors. One common way is to use an id or class on the list item itself, allowing for more targeted styling:
+
+```css
+li {
+  background-color: #fff;
+}
+
+li.item:hover {
+  background-color: #f00;
+}
+```
+
+Now, the `.item` class combined with `:hover` results in a more specific selector, ensuring the hover style overrides any nested background colors.  Alternatively, consider using the `!important` flag, but this approach is generally discouraged because it can lead to maintainability problems.  Always aim for resolving specificity conflicts through better selector usage instead.
