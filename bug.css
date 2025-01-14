@@ -1,0 +1,13 @@
+The following CSS code snippet intends to style a list item with a background color that changes on hover.  However, it doesn't work as expected in some browsers or situations due to specificity issues or inheritance.
+
+```css
+li {
+  background-color: #fff;
+}
+
+li:hover {
+  background-color: #f00;
+}
+```
+
+The problem is that if the list item has nested elements that also have background colors, the hover effect might not override them properly.  This is often due to specificity conflicts.
